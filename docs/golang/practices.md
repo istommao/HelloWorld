@@ -2,12 +2,13 @@
 title: 实践
 order: 2
 nav:
-  title: Go ⚡️
+  title: Go
   order: 1
 group:
-  title: 实践
-  order: 2
+  title: Go
+  order: 1
 ---
+
 
 ## Golang 实践
 

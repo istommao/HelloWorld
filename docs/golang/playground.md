@@ -2,7 +2,7 @@
 title: Playground
 order: 3
 nav:
-  title: Go ⚡️
+  title: Go
   order: 1
 group:
   title: 基础

@@ -1,10 +1,12 @@
 ---
 title: 安装
-order: 2
+order: 10
 nav:
-  title: Python 🐍
+  title: Python
   order: 1
 group:
-  title: 基础
+  title: Python
   order: 1
 ---
+
+# 安装

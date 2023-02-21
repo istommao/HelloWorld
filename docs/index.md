@@ -7,15 +7,15 @@ hero:
     - text: 无声笔记
       link: /guide
 features:
-  - title: Go
-    emoji: ⚡️
-    description: <a href="/golang" target="_blank" rel="noreferrer">Go语言学习笔记</a>
-  - title: Python
-    emoji: 🐍
-    description: <a href="/python" target="_blank" rel="noreferrer">Python笔记</a>
-  - title: Rust
-    emoji: 🦀
-    description: <a href="/guide" target="_blank" rel="noreferrer">Rust学习笔记</a>
+  - title: Go ⚡️/Rust 🦀/Python 🐍
+    emoji: 💻
+    description: <a href="/langs" target="_blank" rel="noreferrer">学习笔记</a>
+  - title: 实践笔记
+    emoji: 🔨
+    description: <a href="/practices_book" target="_blank" rel="noreferrer">实践笔记</a>
+  - title: 学习资源
+    emoji: 📚
+    description: <a href="/guide" target="_blank" rel="noreferrer">学习资源</a>
 ---
 
 ## Hello World
