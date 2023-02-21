@@ -26,6 +26,15 @@ a = "hello world"
 print(a)
 ```
 
+`切片`
+
+```python
+a = "hello world"
+
+b = [6:]
+print(b)
+```
+
 ### 数字 number
 
 ### 列表 list

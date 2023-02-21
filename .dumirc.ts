@@ -8,8 +8,10 @@ export default defineConfig({
     },
     nav: [
       { title: 'Languages', link: '/langs' },
-      { title: 'Practices', link: '/practices_book' }
+      { title: 'Database', link: '/database' },
+      { title: 'Network', link: '/network' },
+      { title: 'Practice', link: '/practice' },
     ],
-    
+
   },
 });
