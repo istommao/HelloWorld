@@ -1,23 +1,21 @@
 ---
 title: A static site based on dumi
 hero:
-  title: Site
-  description: A static site based on dumi
+  title: CodeMax
+  description: 每天一点就Go啦⚡️, 无声编程笔记
   actions:
-    - text: Hello
-      link: /
-    - text: World
-      link: /
+    - text: Go⚡️
+      link: /guide
 features:
-  - title: Hello
-    emoji: 💎
-    description: Put hello description here
-  - title: World
-    emoji: 🌈
-    description: Put world description here
-  - title: '!'
-    emoji: 🚀
-    description: Put ! description here
+  - title: Go
+    emoji: ⚡️
+    description: Go语言学习笔记
+  - title: Python
+    emoji: 🐍
+    description: Python笔记
+  - title: Rust
+    emoji: 🦀
+    description: Rust学习笔记
 ---
 
-helloworld
+hello world
