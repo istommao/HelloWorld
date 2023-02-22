@@ -11,6 +11,7 @@ export default defineConfig({
       { title: 'Database', link: '/database' },
       { title: 'Network', link: '/network' },
       { title: 'Practice', link: '/practice' },
+      { title: 'Daily', link: '/daily_report' },
     ],
 
   },
