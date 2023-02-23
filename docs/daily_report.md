@@ -9,10 +9,15 @@ nav:
 
 ## 2023
 
-### 2023-2-23
+### 2-23
 
 
-### 2-23 kuma
+`算法`
+
+- 单链表
+  - 删除倒数第K个节点 (快慢指针)
+
+### 2-22 kuma
 
 
 >  A fancy self-hosted monitoring tool
