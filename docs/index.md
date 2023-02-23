@@ -1,5 +1,5 @@
 ---
-title: A static site based on dumi
+title: CodeMax NoteBook
 hero:
   title: codemax.cc
   description: 每天一点就Go啦⚡️
