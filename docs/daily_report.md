@@ -9,12 +9,19 @@ nav:
 
 ## 2023
 
-### 2-23
+### 2-24 Go
+
+`Go`
+
+- [MPG模型](/golang/mpg)
+- [GC](/golang/gc)
+
+### 2-23 Algo
 
 
 `算法`
 
-- 单链表
+- [单链表](/algo/linked_list)
   - 删除倒数第K个节点 (快慢指针)
 
 ### 2-22 kuma
