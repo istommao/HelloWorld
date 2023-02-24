@@ -11,6 +11,8 @@ group:
 
 ## 单链表
 
+![](./linked_list.png)
+
 ### 遍历
 
 ```python
@@ -108,6 +110,44 @@ func removeNthFromEnd(head *ListNode, n int) *ListNode {
 }
 ```
 
-## 双链表链表
+## 双链表
+
+`Python`
+
+```python
+# Definition for double-linked list.
+class Node:
+    def __init__(self, val, next_node=None, prev=None):
+        self.value = val
+        self.prev = prev
+        self.next_node = None
+
+
+def print_linked_list(root):
+    while root:
+        print(root.value)
+        root = root.next_node
+
+
+def reverse_print_linked_list(node):
+    while node:
+        print(node.value)
+        node = node.prev
+
+
+root = Node(0)
+n1 = Node(1, prev=root)
+n2 = Node(2, prev=n1)
+n3 = Node(3, prev=n2)
+
+n1.next_node = n2
+n2.next_node = n3
+
+root.next_node = n1
+
+print_linked_list(root)
+print("reverse print")
+reverse_print_linked_list(n3)
+```
 
 ## 循环链表
