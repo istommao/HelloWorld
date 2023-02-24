@@ -16,6 +16,11 @@ nav:
 - [MPG模型](/golang/mpg)
 - [GC](/golang/gc)
 
+`Algo`
+
+- [双链表](/algo/linked_list)
+- [循环链表](/algo/linked_list)
+
 ### 2-23 Algo
 
 
