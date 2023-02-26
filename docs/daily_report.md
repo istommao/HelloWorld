@@ -11,6 +11,9 @@ nav:
 
 ### 2-26 Algo
 
+`pypi`
+- https://github.com/istommao/algolibs
+
 `Algo 循环链表`
 
 - 如何判断链表有环
