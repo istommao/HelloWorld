@@ -40,7 +40,9 @@ n2.next_node = n3
 print_linked_list(root)
 ```
 
-### 删除倒数第K个数
+## 删除倒数第K个数
+
+### Python实现
 
 `https://leetcode.cn/problems/remove-nth-node-from-end-of-list/`
 
@@ -72,6 +74,9 @@ class Solution:
         second.next = second.next.next
         return root
 ```
+
+
+### Go语言实现
 
 `Go`
 
@@ -154,32 +159,8 @@ reverse_print_linked_list(n3)
 
 ## 循环链表
 
-
-![](./circular-linked-list.png)
-
-`Python`
-
-```python
-# Definition for circular linked list.
-class Node:
-
-    def __init__(self, val, next_node=None, prev=None):
-        self.value = val
-        self.prev = prev
-        self.next_node = None
-
-
-
-root = Node(0)
-n1 = Node(1, prev=root)
-n2 = Node(2, prev=n1)
-n3 = Node(3, prev=n2)
-
-
-n1.next_node = n2
-n2.next_node = n3
-
-n3.next_node = n1
-
-root.next_node = n1
-```
+- 如何判断链表有环
+    - 快慢指针（类似操场跑步，跑的快的人最终会套圈（两个指针指向相同节点）
+- 如何找出循环链表的入环点
+    - 先使用快慢指针，当两个节点指向相同节点后，fast节点从根节点开始
+    - fast与slow节点同时一步一步向下一个节点走，下次两个节点相遇时，就是入环点
