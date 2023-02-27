@@ -9,6 +9,16 @@ nav:
 
 ## 2023
 
+
+### 2-27 Algo & Python
+
+`Python`
+- [Discord bot最小demo](/python/discord_bot)
+
+`Algo`
+- [最小栈 - 使用两个栈实现](/algo/min_stack)
+
+
 ### 2-26 Algo
 
 `pypi`

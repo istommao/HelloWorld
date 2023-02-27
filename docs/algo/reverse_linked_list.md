@@ -5,7 +5,7 @@ nav:
   title: Algo
   order: 1
 group:
-  title: 实战
+  title: 链表实战
   order: 1
 ---
 
