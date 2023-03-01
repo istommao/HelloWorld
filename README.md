@@ -1,20 +1,5 @@
-# helloworld
+# hello world
 
-A static site base on [dumi](https://d.umijs.org).
+CodeMax Website [site](https://codemax.cc).
 
-## Development
-
-```bash
-# install dependencies
-$ yarn install
-
-# start dev server
-$ yarn start
-
-# build docs
-$ yarn run build
-```
-
-## LICENSE
-
-MIT
+![](./screenshot.png)
