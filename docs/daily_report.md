@@ -9,6 +9,19 @@ nav:
 
 ## 2023-03
 
+### 3-2 Python
+
+`asyncio queue`
+
+- [asyncio queue](/python/async_queue)
+
+
+### 3-2 Go
+
+`sync & atomic`
+
+- [sync & atomic](/golang/sync_mutex)
+
 ### 3-1
 
 `TestFramework`

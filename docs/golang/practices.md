@@ -1,18 +1,15 @@
 ---
-title: 实践
+title: concurrent-map
 order: 2
 nav:
   title: Go
   order: 1
 group:
-  title: Go
-  order: 1
+  title: 实践
+  order: 10
 ---
 
 
-## Golang 实践
-
-### concurrent map
 
 https://github.com/orcaman/concurrent-map
 

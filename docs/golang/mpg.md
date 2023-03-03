@@ -5,8 +5,8 @@ nav:
   title: Go
   order: 1
 group:
-  title: Go
-  order: 1
+  title: 实践
+  order: 10
 ---
 
 ## MPG概念

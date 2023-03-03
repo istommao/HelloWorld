@@ -5,8 +5,8 @@ nav:
   title: Go
   order: 1
 group:
-  title: Go
-  order: 1
+  title: 实践
+  order: 10
 ---
 
 ## GC 垃圾回收 （三色标记法）
@@ -28,3 +28,5 @@ group:
 
 - [Go 语言设计与实现 - 内存分配](https://draveness.me/golang/docs/part3-runtime/ch07-memory/golang-memory-allocator/)
 - [Go专家编程 - 内存分配原理](https://books.studygolang.com/GoExpertProgramming/chapter04/4.1-memory_alloc.html)
+
+- https://go.dev/blog/ismmkeynote
