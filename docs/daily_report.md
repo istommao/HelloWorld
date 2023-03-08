@@ -9,6 +9,15 @@ nav:
 
 ## 2023-03
 
+
+### 3-9 locust + boomer
+
+> 基于 locust + boomer 实现高并发压力测试
+
+https://github.com/myzhan/boomer
+
+- [locust + boomer 压测实战](/practice/locust_boomer)
+
 ### 3-8 Astro 2.0 正式发布
 
 
