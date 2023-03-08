@@ -9,6 +9,43 @@ nav:
 
 ## 2023-03
 
+### 3-8 Astro 2.0 正式发布
+
+
+> Astro 是一个现代化的轻量级静态站点生成器，用于构建以内容为中心的高性能网站
+
+[Astro 2.0正式发布](https://mp.weixin.qq.com/s/Z3YA9dp5p3PkLm3sePfFJA)
+
+#### Bun
+
+
+> Bun is a modern JavaScript runtime, built from scratch to serve the modern JavaScript focus on three main things:
+
+`Install bun`
+
+```bash
+curl -fsSL https://bun.sh/install | bash
+```
+
+`Demo`
+
+```js
+// http.js
+export default {
+  port: 3000,
+  fetch(request) {
+    return new Response("Welcome to Bun!");
+  },
+};
+```
+
+`Run`
+
+```bash
+bun run http.js
+```
+
+
 ### 3-2 Python
 
 `asyncio queue`
