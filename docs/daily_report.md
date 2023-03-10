@@ -9,6 +9,13 @@ nav:
 
 ## 2023-03
 
+### 3-10 systemd
+
+`systemd` 简单实践
+
+
+- [systemd实战](/practice/systemd)
+
 
 ### 3-9 locust + boomer
 
