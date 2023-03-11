@@ -9,6 +9,50 @@ nav:
 
 ## 2023-03
 
+
+### 3-11 Linux Command
+
+`netstat`
+
+tcp 统计
+
+```bash
+# install
+apt install net-tools
+```
+
+`TCP stats 1`
+
+```bash
+netstat -s -t | sed -e '/Tcp:/!d;:l;n;/^\ /!d;bl'
+
+# output
+Tcp:
+    103728 active connection openings
+    101462 passive connection openings
+    141 failed connection attempts
+    106936 connection resets received
+    3 connections established
+    353276068 segments received
+    353175097 segments sent out
+    77587 segments retransmitted
+    14 bad segments received
+    75744 resets sent
+```
+
+`TCP stats 2`
+
+```bash
+netstat -na | awk '/^tcp/ {++S[$NF]} END {for(a in S) print a, S[a]}'
+
+# output
+LISTEN 29
+LAST_ACK 1
+CLOSE_WAIT 7
+TIME_WAIT 16
+ESTABLISHED 72
+```
+
 ### 3-10 systemd
 
 `systemd` 简单实践
