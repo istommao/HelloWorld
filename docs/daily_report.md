@@ -9,6 +9,78 @@ nav:
 
 ## 2023-03
 
+### 3-15 PostgreSQL
+
+`Install`
+
+```bash
+sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+
+sudo apt-get update
+
+sudo apt-get -y install postgresql
+```
+
+`Start`
+
+```bash
+sudo /etc/init.d/postgresql start  
+sudo /etc/init.d/postgresql stop   
+sudo /etc/init.d/postgresql restart
+```
+
+`Create`
+
+```bash
+sudo -i -u postgres
+
+$ psql
+postgres=#
+
+现在位于数据库提示符下。
+
+2、创建数据库新用户，如 dbuser：
+
+postgres=# CREATE USER dbuser WITH PASSWORD '*****';
+注意：
+
+语句要以分号结尾。
+密码要用单引号括起来。
+3、创建用户数据库，如exampledb：
+
+postgres=# CREATE DATABASE exampledb OWNER dbuser;
+4、将exampledb数据库的所有权限都赋予dbuser：
+
+postgres=# GRANT ALL PRIVILEGES ON DATABASE exampledb TO dbuser;
+5、使用命令 \q 退出psql：
+
+postgres=# \q
+```
+
+
+### 3-13 MongoDB
+
+`Install`
+
+```bash
+brew tap mongodb/brew
+
+brew install mongodb-community@6.0
+```
+
+### 3-12 Linux Command
+
+`Get my ip`
+
+```bash
+curl ifconfig.me
+
+# or
+curl ifconfig.me/all
+```
+
 
 ### 3-11 Linux Command
 
