@@ -9,6 +9,23 @@ nav:
 
 ## 2023-03
 
+### 3-22 Telegram bot
+
+`Python`
+
+- [Telegram bot最小demo](/python/telegram_bot)
+
+
+### 3-16 K8s minikube
+
+`Install minikube`
+
+Website: https://minikube.sigs.k8s.io/docs/start/
+
+
+- [minikube实战](/practice/k8s_minikube)
+
+
 ### 3-15 PostgreSQL
 
 `Install`
