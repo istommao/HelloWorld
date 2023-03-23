@@ -1,5 +1,5 @@
 ---
-title: DP问题
+title: 爬楼梯
 order: 2
 nav:
   title: Algo
@@ -9,8 +9,5 @@ group:
   order: 10
 ---
 
+# 爬楼梯问题
 
-动态规划 `DP`
-
-- 爬楼梯
-- 丢鸡蛋

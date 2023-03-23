@@ -9,6 +9,18 @@ nav:
 
 ## 2023-03
 
+
+### 3-23 Python poetry
+
+
+`Poetry`
+
+> 是一个Python虚拟环境和依赖管理工具，另外它还提供了包管理功能，比如打包和发布。可以用来管理python库和python程序。
+
+
+- [Python poetry实践](/python/poetry)
+
+
 ### 3-22 Telegram bot
 
 `Python`
@@ -195,7 +207,7 @@ bun run http.js
 ```
 
 
-### 3-2 Python
+### 3-3 Python
 
 `asyncio queue`
 
@@ -208,7 +220,7 @@ bun run http.js
 
 - [sync & atomic](/golang/sync_mutex)
 
-### 3-1
+### 3-1 `TestFramework locust`
 
 `TestFramework`
 

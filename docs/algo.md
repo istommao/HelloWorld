@@ -13,6 +13,9 @@ features:
   - title: 二叉树
     emoji: 🌲
     description: <a href="/">二叉树、红黑树、心里有树</a>
+  - title: DP实战
+    emoji: 🏷
+    description: <a href="/algo/dp/dp">DP问题</a>
 ---
 
 ## 目录
