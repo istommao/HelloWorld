@@ -7,6 +7,17 @@ nav:
 
 ---
 
+## 2023-04
+
+### 4-6
+
+`Copy data from one talbe to another`
+
+```bash
+INSERT INTO Destination SELECT * FROM Source;
+```
+
+
 ## 2023-03
 
 
