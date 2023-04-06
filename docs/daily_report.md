@@ -9,6 +9,28 @@ nav:
 
 ## 2023-04
 
+### 4-7
+
+`磁盘挂载`
+
+```bash
+# 新建dir
+sudo mkdir /data
+
+# 查看磁盘分区表
+sudo fdisk -l
+
+# blkid - locate/print block device attributes
+sudo blkid
+
+# 编辑 fstab file
+sudo vim /etc/fstab
+# UUID=<blkid 查看对应设备的id>       /data   ext4    defaults        0 0
+
+# 挂载
+sudo mount -a
+```
+
 ### 4-6
 
 `Copy data from one talbe to another`
