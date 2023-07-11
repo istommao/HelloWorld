@@ -7,6 +7,30 @@ nav:
 
 ---
 
+## 2023-07
+
+### 7-11
+
+- `Git clone 指定使用ssh private key`
+
+```bash
+git -c core.sshCommand="ssh -i ~/.ssh/<your_ssh_private_key>" clone git@github.com:<YourProject>
+```
+
+## 2023-05
+
+### 5-19
+
+- `Python Project Wizard`
+
+*cookiecutter*
+
+https://github.com/cookiecutter/cookiecutter
+
+[使用cookiecutter来创建新项目]
+
+https://note.qidong.name/2018/10/cookiecutter/
+
 ## 2023-04
 
 ### 4-7
