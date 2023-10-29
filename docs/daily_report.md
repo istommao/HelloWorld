@@ -7,6 +7,72 @@ nav:
 
 ---
 
+## 2023-10
+
+- install script
+
+```bash
+#!/usr/bin/env bash
+set -e
+
+echo Installing ioboard...
+
+BASE_DIR=${XDG_CONFIG_HOME:-$HOME}
+IOBOARD_DIR=${IOBOARD_DIR-"$BASE_DIR/.ioboard"}
+
+IOBOARD_BIN_DIR="$IOBOARD_DIR/bin"
+IOBOARD_MAN_DIR="$IOBOARD_DIR/share/man/man1"
+
+echo ${BASE_DIR}
+
+BIN_URL="https://raw.githubusercontent.com/istommao/ioboard/main/ioboard"
+BIN_PATH="$IOBOARD_BIN_DIR/ioboard"
+
+
+# Create the .ioboard bin directory and ioboard binary if it doesn't exist.
+mkdir -p $IOBOARD_BIN_DIR
+curl -# -L $BIN_URL -o $BIN_PATH
+chmod +x $BIN_PATH
+
+# Create the man directory for future man files if it doesn't exist.
+mkdir -p $IOBOARD_MAN_DIR
+
+
+# Store the correct profile file (i.e. .profile for bash or .zshenv for ZSH).
+case $SHELL in
+*/zsh)
+    PROFILE=${ZDOTDIR-"$HOME"}/.zshenv
+    PREF_SHELL=zsh
+    ;;
+*/bash)
+    PROFILE=$HOME/.bashrc
+    PREF_SHELL=bash
+    ;;
+*/fish)
+    PROFILE=$HOME/.config/fish/config.fish
+    PREF_SHELL=fish
+    ;;
+*/ash)
+    PROFILE=$HOME/.profile
+    PREF_SHELL=ash
+    ;;
+*)
+    echo "ioboard: could not detect shell, manually add ${IOBOARD_BIN_DIR} to your PATH."
+    exit 1
+esac
+
+
+# Only add ioboard if it isn't already in PATH.
+if [[ ":$PATH:" != *":${IOBOARD_BIN_DIR}:"* ]]; then
+    # Add the ioboard directory to the path and ensure the old PATH variables remain.
+    echo >> $PROFILE && echo "export PATH=\"\$PATH:$IOBOARD_BIN_DIR\"" >> $PROFILE
+fi
+
+echo && echo "Detected your preferred shell is ${PREF_SHELL} and added ioboard to PATH. Run 'source ${PROFILE}' or start a new terminal session to use ioboard."
+echo "Then, simply run 'ioboard' to install ioboard."
+
+```
+
 ## 2023-07
 
 ### 7-11
