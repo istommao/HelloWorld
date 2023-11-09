@@ -7,6 +7,16 @@ nav:
 
 ---
 
+## 2023-11
+
+- [Rust web实践](/practice/rust_web)
+
+基于 ntex + sea-orm 实现rust web demo
+
+- https://ntex.rs/
+- https://github.com/SeaQL/sea-orm
+
+
 ## 2023-10
 
 - install script
