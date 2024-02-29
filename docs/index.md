@@ -56,3 +56,20 @@ fn main() {
 
 - https://snappify.com/
 - https://codeimg.io/
+- https://poet.so/
+- https://vividshare.io/
+    - https://tweetlet.net/
+- https://ray.so/
+
+
+- https://10015.io/tools/code-to-image-converter
+
+
+<img src="./snappify.png" width="60%" height="auto">
+
+
+
+*Github*
+
+- https://github.com/mixn/carbon-now-cli
+- https://github.com/Idered/chalk.ist
