@@ -7,6 +7,130 @@ nav:
 
 ---
 
+
+## 2024-2
+
+### 2-29
+
+Golang调用AWS启动EC2
+
+```bash
+
+import (
+    "context"
+    "fmt"
+    "time"
+
+    "github.com/aws/aws-sdk-go-v2/aws"
+    "github.com/aws/aws-sdk-go-v2/config"
+    "github.com/aws/aws-sdk-go-v2/credentials"
+    "github.com/aws/aws-sdk-go-v2/service/ec2"
+    "github.com/aws/aws-sdk-go-v2/service/ec2/types"
+)
+
+func GetEC2Client(AWSAccessKeyID string, SecretAccessKey string, region string) (*ec2.Client, error) {
+    cfg, err := config.LoadDefaultConfig(
+        context.TODO(),
+        config.WithDefaultRegion(region),
+        config.WithCredentialsProvider(credentials.NewStaticCredentialsProvider(AccessKeyID, SecretAccessKey, "")),
+    )
+    if err != nil {
+        return nil, err
+    }
+
+    ec2Client := ec2.NewFromConfig(cfg)
+    return ec2Client, nil
+}
+
+func CreateAWSEC2(ec2Client *ec2.Client, instanceName string, count int32) (types.Instance, error) {
+    ctx := context.Background()
+
+    imageId := "" // Amazon Linux AMI
+    KeyName := ""    // key pairs name
+    securityGroupId := ""
+    subnetId := ""
+
+    input := &ec2.RunInstancesInput{
+        MaxCount:       aws.Int32(count),
+        MinCount:       aws.Int32(count),
+        DisableApiStop: aws.Bool(false),
+        ImageId:        &imageId,
+        InstanceType:   types.InstanceTypeT2Small,
+        KeyName:        &KeyName,
+        NetworkInterfaces: []types.InstanceNetworkInterfaceSpecification{
+            {
+                AssociatePublicIpAddress: aws.Bool(true),
+                DeleteOnTermination:      aws.Bool(true),
+                DeviceIndex:              aws.Int32(0),
+                Groups: []string{
+                    securityGroupId,
+                },
+                InterfaceType:    aws.String("interface"),
+                NetworkCardIndex: aws.Int32(0),
+                SubnetId:         &subnetId,
+            },
+        },
+        TagSpecifications: []types.TagSpecification{
+            {
+                ResourceType: types.ResourceTypeInstance,
+                Tags: []types.Tag{
+                    {
+                        Key:   aws.String("Name"),
+                        Value: aws.String(instanceName),
+                    },
+                },
+            },
+        },
+    }
+
+    output, err := ec2Client.RunInstances(ctx, input)
+    if err != nil {
+        return types.Instance{}, err
+    }
+
+    waiter := ec2.NewInstanceRunningWaiter(ec2Client)
+    describeInput := &ec2.DescribeInstancesInput{
+        InstanceIds: []string{aws.ToString(output.Instances[0].InstanceId)},
+    }
+    maxWaitDur := 360 * time.Second
+    describeOutput, err := waiter.WaitForOutput(ctx, describeInput, maxWaitDur)
+    if err != nil {
+        return types.Instance{}, err
+    }
+
+    instance := describeOutput.Reservations[0].Instances[0]
+    fmt.Println(*instance.InstanceId)
+    fmt.Println(*instance.SubnetId)
+    fmt.Println(*instance.NetworkInterfaces[0].NetworkInterfaceId)
+    fmt.Println(*instance.PublicIpAddress)
+    fmt.Println(*instance.PrivateIpAddress)
+
+    return instance, nil
+}
+```
+
+
+## 2023-12
+
+- git 免输入用户名密码
+
+```bash
+cd ~
+touch .git-credentials
+vim .git-credentials
+https://{username}:{password}@github.com
+```
+
+```bash
+git config --global credential.helper store
+
+# 打开~/.gitconfig文件，会发现多了一项:
+# [credential]
+# helper = store
+```
+-其实直接执行“git config --global credential.helper store”，然后调用一次“git push xxx”操作，输入一次账户和密码之后，git就会自动生
+成一个.git-credentials文件，然后将本次的账号密码信息保存进文件中。
+
 ## 2023-11
 
 - [Rust web实践](/practice/rust_web)
