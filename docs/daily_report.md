@@ -7,6 +7,44 @@ nav:
 
 ---
 
+## 2024-3
+
+### 3-6
+
+Golang调用cloudflare设置子域名
+
+```go
+import (
+    "context"
+    "github.com/cloudflare/cloudflare-go"
+)
+
+func CreateDnsRecord(CLOUDFLARE_API_TOKEN string, zoneId string, domain string, content string, proxiable bool, proxied bool) (cloudflare.DNSRecord, error) {
+   
+    api, err := cloudflare.NewWithAPIToken(CLOUDFLARE_API_TOKEN)
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    params := cloudflare.CreateDNSRecordParams{
+        Type: "A",
+        Name: domain,
+        // TTL:     120,
+        Content:   content, // ip address
+        Proxiable: proxiable,
+        Proxied:   &proxied,
+    }
+
+    // Most API calls require a Context
+    ctx := context.Background()
+    record, err := api.CreateDNSRecord(ctx, cloudflare.ZoneIdentifier(zoneId), params)
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    return record, err
+}
+```
 
 ## 2024-2
 
@@ -14,8 +52,7 @@ nav:
 
 Golang调用AWS启动EC2
 
-```bash
-
+```go
 import (
     "context"
     "fmt"
