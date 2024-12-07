@@ -7,6 +7,23 @@ nav:
 
 ---
 
+## 2024-12
+
+### 12-7
+
+
+`marimo 一个替代 python notebook jupyter的项目`
+
+```shell
+pip install marimo
+```
+
+```shell
+marimo edit --host 0.0.0.0 --no-token
+```
+
+![alt text](./python-marimo.png)
+
 ## 2024-3
 
 ### 3-6
